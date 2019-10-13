@@ -1,0 +1,168 @@
+html,
+body{
+  min-width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  transition: color .2s cubic-bezier(.25,.8,.25,1);
+}
+a:focus,
+a:hover{
+  text-decoration: none;
+}
+.container{
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.flex_column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loaded{
+  opacity: 1 !important;
+}
+
+/* Header styles */
+header{
+  min-width: 100%;
+}
+/* End Header styles */
+
+/* Menu styles */
+.menu_wrap{
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background-color: rgba(201, 201, 201, 0.7);
+  
+}
+.menu{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.menu-left{
+  width: 296px;
+  height: 100%;
+  padding-left: 15px;
+}
+.menu-right{
+  padding-right: 15px;
+}
+.menu-list{
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+.menu-item{
+  display: block;
+}
+.menu-link{
+  display: block;
+  height: 100%;
+  font-weight: 700;
+  line-height: 70px;
+  color: #fff;
+}
+.menu-link:hover{
+  color: #eee;
+}
+.menu-logo{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+.menu-logo:hover{
+  color: #eee;
+}
+/* End Menu styles */
+
+/* Banner styles */
+.banner{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.40), rgba(255,255,255,1)), 
+    url(https://thumb.tildacdn.com/tild6562-3137-4161-a636-656139633264/-/format/webp/superua-1548237844-1.jpg) no-repeat center/cover;
+  /* background-attachment: fixed; */
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(.25,.8,.25,1);
+}
+.banner-block{
+  max-width: 660px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 42px 0;
+}
+.banner-title{
+  padding: 20px 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+.banner-text{
+  padding-bottom: 30px;
+}
+.banner-btns{
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.btn{
+  padding: 20px 60px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 700;
+}
+.btn.btn_about{
+  border-color: transparent;
+  background-color: #f5e503;
+  margin-right: 10px;
+}
+/* End Banner styles */
+
+
+/* Media queries */
+@media (max-width: 1199px){
+  .container{
+    max-width: 960px;
+  }
+  .banner-block{
+    max-width: 540px;
+  }
+}
+@media (max-width: 991px){
+  .container{
+    max-width: 640px;
+  }
+}
+@media(max-width: 639px){
+  .container{
+    width: 100%;
+  }
+  .btn{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
